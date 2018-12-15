@@ -1,0 +1,56 @@
+/*
+Theme Name: JetFuel
+Author: Ben Grzybowski,
+Author URI: https://bengrzybowski.site
+Description: Ecommerce Theme to be used with WordPress and WooCommerce
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Ecommerce, WooCommerce, Art, Sell stuff, Cool
+Text Domain: JetFuel
+*/
+
+
+
+body {
+    font-family: 'PT Serif', serif;
+    font-family: 'Varela', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.pad {
+    padding: 15px;
+}
+
+#intro {
+
+}
+
+#intro video {
+ }
+
+#content {
+    position: relative;
+}
+
+#intro-copy {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+#intro-copy h2 {
+    text-align: center;
+    margin: 2%;
+}
+
+#intro-copy img {
+    margin: 0 auto;
+    display: inherit;
+}
+
+

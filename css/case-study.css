@@ -1,0 +1,51 @@
+ #case img {
+          width: 100%;
+          position: relative;
+          z-index: -11;
+      }
+      
+      .case-text {
+          position: relative;
+      }
+      
+      .case-text p {
+          position: absolute;
+          top: -60px;
+          left: 30%;
+          visibility: hidden;
+      }
+      
+      .case-text h3 {
+          position: absolute;
+          top: -90px;
+          left: 39%;
+          visibility: hidden;
+      }
+
+    #case > div{
+      float:left;
+      padding:10px;
+        width: 45%;
+      margin:8px;
+      box-shadow: 0 1px 2px #334;
+        z-index: 100;
+      -webkit-transition:0.5s;
+      transition:0.5s;
+    }
+
+    #case:hover > div{
+      background-color: rgba(0,0,0,.8);
+    }
+
+    #case > div:hover{
+       background-color: rgba(220,220,220,.8);
+      }
+      
+      #case > div:hover .case-text p {
+          visibility: visible;
+      }
+      
+      #case > div:hover .case-text h3 {
+          visibility: visible;
+      }
+      
