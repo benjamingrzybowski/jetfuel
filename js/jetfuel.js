@@ -1,51 +1,63 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    //navigation script
-//gathering elements to be worked with
-    var navIcon = document.getElementById('nav-icon');
-    var navMenu = document.getElementById('mobile-menu');
-//on click event to trigger icon animation and menu item animations
-    navIcon.onclick = function() {
-        if (navIcon.classList.contains('open') != true) {
-            navIcon.classList.add('open');
-            navMenu.classList.add('open-mobile-menu');
+        var nav = document.getElementById('navigation');
+        var content = document.getElementById('content');
+        var navItems = nav.getElementsByTagName('a');
+        var x = 0;
 
-            var x = 0;
+        nav.classList.add('white');     for(x = 0; x < navItems.length; x++) {
+        navItems[x].style.color="black";
+    }
+
+
+        //vanilla JS helper function to determine element positions relative to viewport
+        function offset(el) {
+            var rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+        }
+
+        window.addEventListener('scroll', function() {
+            var navPos = offset(nav);
+            var contentPos = offset(content);
+            if (navPos.top > contentPos.top) {
+                nav.classList.add('black');
+                nav.classList.remove('white');
+                for(x = 0; x < navItems.length; x++) {
+                    navItems[x].style.color="white";
+                }
+            } else {
+                nav.classList.add('white');
+                nav.classList.remove('black');
+                for(x = 0; x < navItems.length; x++) {
+                    navItems[x].style.color="black";
+                }
+            }
+
+
+        });
+
+
+        //navigation script
+//gathering elements to be worked with
+        var navIcon = document.getElementById('nav-icon');
+        var navMenu = document.getElementById('mobile-menu');
+//on click event to trigger icon animation and menu item animations
+        navIcon.onclick = function () {
+            if (navIcon.classList.contains('open') != true) {
+                navIcon.classList.add('open');
+                navMenu.classList.add('open-mobile-menu');
+
+                var x = 0;
 //reset everything on close
-        } else {
-            navIcon.classList.remove('open');
-            navMenu.classList.remove('open-mobile-menu');
+            } else {
+                navIcon.classList.remove('open');
+                navMenu.classList.remove('open-mobile-menu');
+
+            }
 
         }
 
-    }
-
-//slide menu script
-//gathering elements to be worked with
-    var slideMenuIcon = document.getElementById('slide-menu-icon');
-    var slideMenu = document.getElementById('slide-menu');
-//on click event to trigger icon animation and menu item animations
-    slideMenuIcon.onclick = function() {
-        if (slideMenuIcon.classList.contains('open-left') != true) {
-            slideMenuIcon.classList.add('open-left');
-            slideMenu.classList.add('open-slide-menu');
-
-            var slideMenuItems = slideMenu.children;
-            for (var i = 0; i < slideMenuItems.length; i++) {
-                var tableChild = slideMenuItems[i];
-                tableChild.classList.add('visible');
-
-            }
-//reset everything on close
-        } else {
-            slideMenuIcon.classList.remove('open-left');
-            slideMenu.classList.remove('open-slide-menu');
-            var slideMenuItems = slideMenu.children;
-            for (var i = 0; i < slideMenuItems.length; i++) {
-                var tableChild = slideMenuItems[i];
-                tableChild.classList.remove('visible');
-            }
-        }
-    }
-});
+    });
     

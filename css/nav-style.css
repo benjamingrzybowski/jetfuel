@@ -4,22 +4,27 @@
 nav {
     z-index: 999;
     position: fixed;
-    background-color: rgba(26,24,23,.8);
-    font-family: 'PT Serif', serif;
+    font-family: 'Varela', sans-serif;
     text-transform: uppercase;
 }
 
+#navigation.black {
+    background-color: rgba(26,24,23,.8);
+}
+
+#navigation.white {
+    background-color: rgba(250,250,250,.8);
+}
+
 nav ul li {
-        display: inline-flex;
-        margin: 10px;
-        font-size: 14px;
-        padding: 5px;
-        transition: top 0.5s ease;
-        position: relative;
-        top: 0;
+    display: inline-flex;
+    font-size: 14px;
+    padding: 15px;
+    transition: top 0.5s ease;
+    position: relative;
+    top: 0;
+    margin: 0px 15px 0px 15px;
     }
-
-
 
     .stacked-nav li {
         display: block;
@@ -28,13 +33,13 @@ nav ul li {
     nav ul li a:hover {
         color: rgba(51,172,223, .7);
     }
-    
+
     nav ul li a {
         color: white;
     }
 
     nav ul li a:hover {
-            text-decoration: none;
+        text-decoration: none;
         }
 
     .navFix {
@@ -281,10 +286,9 @@ nav ul li {
     }
     
    .nav-right {
-        display: inline-block;
-        position: relative;
-        float: right;
-        top: 28px;
+       position: relative;
+       left: 27%;
+       top: 20px;
     }
 
     .stacked-nav {
