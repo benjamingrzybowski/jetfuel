@@ -25,7 +25,7 @@
             <div class="row pad">
                 <div class="col-md-7 pad">
                     <h3><a href="<?php echo get_permalink( $loop->post->ID ) ?>"><?php the_title(); ?></a></h3>
-                    <p><?php the_content(); ?></p>
+                    <p><?php the_excerpt(); ?></p>
                 </div>
                 <div class="col-md-5 pad" id="art">
                     <a href="<?php the_permalink() ?>"><?php

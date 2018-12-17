@@ -58,14 +58,41 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #single {
-    height: 750px;
+    height: 850px;
     background-size: cover;
+}
+
+footer {
+    background-color: rgba(50,50,50);
+    color: white;
+}
+
+#me {
+    position: relative;
+    top: 39%;
+}
+
+#me a {
+    color: white;
 }
 
 #footer-social {
     position: relative;
     top: 39%;
     left: 25%;
+}
+
+#footer-social i {
+    color: white;
+}
+
+#footer-social i:hover {
+    color: black;
+}
+
+
+.woocommerce form .form-row {
+    display: contents;
 }
 
 

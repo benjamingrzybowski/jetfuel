@@ -28,7 +28,6 @@ function jetfuel_scripts() {
     wp_enqueue_style('case-study-style', get_template_directory_uri() . '/css/case-study.css');
     wp_enqueue_style('project-style', get_template_directory_uri() . '/style.css');
     /* Scripts */
-    https://code.jquery.com/jquery-3.3.1.slim.min.js
     wp_enqueue_script( 'nav-script', get_template_directory_uri() . '/js/jetfuel.js', true );
 }
 

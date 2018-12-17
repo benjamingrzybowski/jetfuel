@@ -4,8 +4,9 @@
 nav {
     z-index: 999;
     position: fixed;
-    font-family: 'Varela', sans-serif;
+    font-family: 'Permanent Marker', cursive;
     text-transform: uppercase;
+    transition: background-color 0.5s ease;
 }
 
 #navigation.black {
@@ -18,7 +19,7 @@ nav {
 
 nav ul li {
     display: inline-flex;
-    font-size: 14px;
+    font-size: 24px;
     padding: 15px;
     transition: top 0.5s ease;
     position: relative;
